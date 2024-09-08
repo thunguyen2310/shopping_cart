@@ -1,0 +1,40 @@
+<div class="bg-lazy bg-visible-lazy list-prod">
+    <div class="teko-row bg-lazy bg-visible-lazy detail-prod">
+        <div class="teko-col products">
+            <div class="bg-lazy bg-visible-lazy pd-item">
+                <div class="product-category">
+                    <!-- <div class="css-fsvkwb"></div> -->
+                    <div class="css-frame">
+                        <div class="grid-4">
+                            @for (item of products ; track $index){
+                            <div>
+                                <div class="prod_item">
+                                    <div class="allow-click product-info">
+
+                                        <picture class="image-wrapper"><img src={{item.img}} loading="lazy">
+                                        </picture>
+
+                                        <div class="detail-card center top-product-section">
+                                            <div class="detail-card__name css-descr">{{item.description}}</div>
+                                            <div class="detail-card__price css-cost"><span>${{item.cost}}</span></div>
+                                        </div>
+
+                                        <div class="ant-space ant-space-vertical">
+                                            <div class="style-btnByNow">
+                                                <button class="css-btn mg-t6"><span><span>Buy Now</span></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>}
+                        </div>
+                        <!-- <div class="hide css-wdgrxf"></div>
+                        <div class="hide css-wdgrxf"></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

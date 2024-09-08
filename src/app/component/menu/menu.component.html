@@ -1,0 +1,56 @@
+<div class="header_inner clearfix">
+  <div class="header-horizontal header-category-main">
+    <div class="logo-horizontal clearfix">
+      <div class="logo_wrapper" style="height: 100px;">
+        <div class="q_logo">
+          Shopping Mall
+        </div>
+      </div>
+    </div>
+    <div class="inner-header-horizontal">
+      <ul class="menu-horizontal">
+        @for (sv of items ; track $index){
+        <li>
+          <a href="/#{{sv.label}}">
+            {{sv.label}}
+          </a>
+        </li>}
+      </ul>
+    </div>
+  </div>
+  <div class="header-custom-pull-left clearfix">
+  </div>
+
+  <div class="header-right-horizontal">
+    <div class="login_cart-inRight">
+      <div class="side_menu_button_wrapper">
+        <div class="header_bottom_right_widget_holder">
+          <div class="widget_text header_bottom_widget widget_custom_html">
+            <div class="textwidget custom-html-widget">
+              <a>Account</a>
+              <div class="login-header_inneright"></div>
+            </div>
+          </div>
+
+          <div class="header_bottom_widget widget_woocommerce-dropdown-cart">
+            <div class="shopping_cart_outer">
+              <div class="shopping_cart_inner" style="height: 100px;">
+                <div class="shopping_cart_header">
+                  <a class="header_cart" href="https://laminapparel.com/cart/"> <span class="header_cart_span"></span>
+                  </a>
+                  <div class="shopping_cart_dropdown">
+                    <div class="shopping_cart_dropdown_inner">
+                    </div>
+                    <a>Cart <i class="fa fa-shopping-cart"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
