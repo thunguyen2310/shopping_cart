@@ -1,0 +1,41 @@
+.side_menu_button_wrapper {
+    display: table;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.woocommerce table.cart tbody td.product-remove,
+.woocommerce-page table.cart tbody td.product-remove {
+    text-align: center;
+    border-right: 1px solid #e0dede;
+}
+
+.product-remove {
+    text-align: center;
+}
+
+.pd-40 {
+    padding-top: 40px;
+}
+
+.empty-cart-wrapper {
+    text-align: center;
+}
+
+.return-to-shop {
+    text-align: center;
+
+
+    .button.wc-backward.tiny {
+        background: #000000;
+        color: #ffffff;
+        border: 2px solid #000000;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+.product-total{
+    padding: 10px;
+}

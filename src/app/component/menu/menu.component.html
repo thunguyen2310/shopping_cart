@@ -11,7 +11,7 @@
       <ul class="menu-horizontal">
         @for (sv of items ; track $index){
         <li>
-          <a href="/#{{sv.label}}">
+          <a  routerLink='/'>
             {{sv.label}}
           </a>
         </li>}
@@ -36,12 +36,12 @@
             <div class="shopping_cart_outer">
               <div class="shopping_cart_inner" style="height: 100px;">
                 <div class="shopping_cart_header">
-                  <a class="header_cart" href="https://laminapparel.com/cart/"> <span class="header_cart_span"></span>
+                  <a class="header_cart"> <span class="header_cart_span"></span>
                   </a>
                   <div class="shopping_cart_dropdown">
                     <div class="shopping_cart_dropdown_inner">
                     </div>
-                    <a>Cart <i class="fa fa-shopping-cart"></i></a>
+                    <a routerLink='/cart'>Cart</a>
                   </div>
                 </div>
               </div>

@@ -71,5 +71,15 @@ export class HttpService {
     return this.items;
   }
 
+  removeToCart(sp: any) {
+    
+    for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].id === sp.id) {
+          this.items.splice(i, 1);
+          console.log(this.items);
+      }
+  }
+  }
+
   // ... other HTTP methods (PUT, DELETE, PATCH)
 }

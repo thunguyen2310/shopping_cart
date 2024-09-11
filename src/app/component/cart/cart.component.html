@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+
+<table class="table side_menu_button_wrapper" *ngIf=" products.length >0; else empty_cart ">
+  <thead>
+    <tr>
+      <th class="product-remove"></th>
+      <th class="product-thumbnail"></th>
+      <th class="product-name">Product</th>
+      <th class="product-price">Price</th>
+      <th class="product-quantity">Quantity</th>
+      <th class="product-subtotal">Subtotal</th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let c of products">
+    <tr>
+      <td class="product-remove pd-40" (click)="removeProd(c)">x</td>
+      <td>
+        <picture class="image-wrapper pd-40"><img src={{c.img}} width="70px">
+        </picture>
+      </td>
+      <td class="pd-40">{{c.name}}</td>
+      <td class="pd-40">{{c.cost}}</td>
+      <td class="pd-40" > <input [(ngModel)]="c.order_quantity" type="number" min="1" /> </td>
+      <td class="pd-40">{{c.order_quantity*c.cost}}</td>
+
+    </tr>
+  </tbody>
+  <th class="product-total">Total Price</th>
+  <th class="product-total">{{totalPrice()}}</th>
+</table>
+
+<ng-template #empty_cart>
+  <div class="empty-cart-wrapper">
+    <p class="cart-empty woocommerce-info">Your cart is currently empty.</p>
+  </div>
+  <div class="return-to-shop">
+    <a class="button wc-backward tiny" routerLink='/'>Return to shop </a>
+  </div>
+</ng-template>
+<router-outlet></router-outlet>
