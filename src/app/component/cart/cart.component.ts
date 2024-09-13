@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
-import { HttpService } from '../../services/httpService';
-import { Iprod } from '../../iprod';
 import { iCart } from "../../iCart";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpCart } from '../../services/httnCart';
 @Component({
   selector: 'app-cart',
   standalone: true,
@@ -15,7 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 })
 export class CartComponent {
   products: iCart[] = [];
-  constructor(public cartService: HttpService) {
+  constructor(public cartService: HttpCart) {
     this.products = this.cartService.getItemsCart();
   }
 

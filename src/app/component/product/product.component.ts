@@ -1,7 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule, Routes } from "@angular/router";
-import { HttpService } from '../../services/httpService';
 import { Iprod } from '../../iprod';
+import { HttpCart } from '../../services/httnCart';
 @Component({
     selector: 'app-product',
     standalone: true,
@@ -32,7 +32,7 @@ export class ProductComponent implements OnInit {
 
     products: Iprod[] = [];
 
-    constructor(private cartService: HttpService) { }
+    constructor(private cartService: HttpCart) { }
     ngOnInit(): void {
         this.products = [
             { id: 'ma 1', name:'DRAWSTRING LINEN PANTS', description: 'DRAWSTRING LINEN PANTS', img: "https://laminapparel.com/wp-content/uploads/2024/08/74.png", cost: 200, total_quantity: 10 },
